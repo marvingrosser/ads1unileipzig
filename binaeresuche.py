@@ -16,11 +16,11 @@ def binsuche(arr, x, i):
             print(' -----> gefunden')
         if x<arr[mid]:
             print(str(x) + ' < ' + str(arr[mid]))
-            print('Suche x=' + str(x) + '  in L[' + str(0) + ' . . .' + str(mid) + ']')
+            print('Suche x=' + str(x) + '  in L[' + str(0) + ' . . .' + str(mid-1) + ']')
             binsuche(arr[0:mid],x, i)
         if x>arr[mid]:
             print(str(x) + ' > ' + str(arr[mid]))
-            print('Suche x=' + str(x) + '  in L['+str(mid+1)+' . . .'+ str(len(arr))   +']')
+            print('Suche x=' + str(x) + '  in L['+str(mid+1)+' . . .'+ str(len(arr)-1)   +']')
             binsuche(arr[mid+1:len(arr)],x, i)
 
 
