@@ -33,5 +33,8 @@ def devcon(arr,i, x):
         print('     --> Dann wende Verfahren auf L2 rekursiv an i = i - 1 - L1.length = ' + str(i-1-len(L1)))
         return devcon(L2, i-1-len(L1), x+1)
     print('Nein\n FEHLER')
+    
+    
+#Beispiel:
 ar= [5,2,7,3,1,6,12,10,9,16]
 print(devcon(ar, 5, 1))
