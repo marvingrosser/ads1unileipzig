@@ -26,6 +26,7 @@ def shellsort(arr):
         if sw < 1: sw = 1
     return arr
 
+#Beispiel
 ar = [2,5,8,7,3,1,0,8,9,10,38,11,15,123,75,2,34,32,65,23,45,7654,234,64,233]
 print(ar)
 print(shellsort(ar))
