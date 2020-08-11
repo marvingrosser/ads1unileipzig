@@ -23,7 +23,7 @@ def binsuche(arr, x, i):
             print('Suche x=' + str(x) + '  in L['+str(mid+1)+' . . .'+ str(len(arr)-1)   +']')
             binsuche(arr[mid+1:len(arr)],x, i)
 
-
+#Beispiel
 ar = [2,8,8,9,27,28,30,47,60,66,67,67,83,101,103,127,152,164,177,182,192,195,204,210,219,221,242,243,243,255,268,288]
 
 print(binsuche(ar,114, 0))
