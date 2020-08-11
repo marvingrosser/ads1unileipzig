@@ -19,7 +19,7 @@ def Quicksort(arr):
 
     return arr
 
-
+#Beispiel
 arr = [0,4,8,9,32,4,3,123,54,436,645,63,3,5,8,978,56,324,4,3,435,653,45,7,63,3,3,323,3]
 print(arr)
 print(Quicksort(arr))
