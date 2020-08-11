@@ -38,6 +38,7 @@ def sequientiellesuche(arr, x):
         print('Nein')
     print('nicht gefunden')
 
+#Beispiel
 ar = [2,8,8,9,27,28,30,47,60,66,67,67,83,101,103,127,152,164,177,182,192,195,204,210,219,221,242,243,243,255,268,288]
 
 spruchsuche(ar, 114)
