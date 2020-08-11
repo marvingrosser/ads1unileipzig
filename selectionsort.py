@@ -19,7 +19,7 @@ def selectionsort(arr):
         print('tausch')
     return arr
 
-
+#Beispiel
 ar=[2,6,8,3,34,3,4,7,3,1,7,4,2,3,9,0]
 print(ar)
 print(selectionsort(ar))
