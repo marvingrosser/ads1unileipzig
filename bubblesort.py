@@ -23,7 +23,7 @@ def bubblesort(arr):
                 t=t+1
     return arr
 
-
+#bsp:
 ar = [3,6,8,2,35,5,6,7,34,6,97,34,2,543,1]
 print(ar)
 print(bubblesort(ar))
