@@ -1,5 +1,7 @@
 import math
-def spruchsuche(arr, x):
+import sys
+def sprungsuche(arr, x):
+
     m = math.floor(math.sqrt(len(arr)))
     print('m = ' + str(m))
     i = 1
@@ -16,7 +18,7 @@ def spruchsuche(arr, x):
 
         if x < arr[im]:
             print('Ja')
-            print('     Dann Suche sequentiell in'+str(arr[((i - 1) * m):im]))
+            print('     Dann Suche sequentiell in '+str(arr[((i - 1) * m):im]))
 
             sequientiellesuche(arr[((i-1)*m):(im)+1], x)
             return 0
@@ -28,6 +30,7 @@ def spruchsuche(arr, x):
         print('gefunden')
         return 0
     print('Nein')
+    print('nicht gefunden')
 def sequientiellesuche(arr, x):
     for i in range(len(arr)-1):
         print('             Ist x == L['+str(i)+'] ?', end = ' ')
@@ -37,8 +40,16 @@ def sequientiellesuche(arr, x):
             return 0
         print('Nein')
     print('nicht gefunden')
+def StrToArray(str):
+    arr = str[1:-1].split(',')
+    print(arr)
+    return arr
 
-#Beispiel
-ar = [2,8,8,9,27,28,30,47,60,66,67,67,83,101,103,127,152,164,177,182,192,195,204,210,219,221,242,243,243,255,268,288]
+def main(argv):
+    if (argv[1] == "-h"):
+        print(f"USAGE:\n \t python sprungsuche.py <SortedArrray> <zuSuchendesElement> \n \n BSP: \n\t python sprungsuche.py [1,2,3,4] 3")
+    else:
+        sprungsuche(StrToArray(argv[1]), argv[2])
+if __name__ == "__main__":
+    main(sys.argv)
 
-spruchsuche(ar, 114)

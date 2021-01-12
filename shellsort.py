@@ -1,3 +1,4 @@
+import sys
 def printwhere(array,x,y):
     list = ([])
     for i in range(len(array)):
@@ -27,6 +28,15 @@ def shellsort(arr):
     return arr
 
 #Beispiel
-ar = [2,5,8,7,3,1,0,8,9,10,38,11,15,123,75,2,34,32,65,23,45,7654,234,64,233]
-print(ar)
-print(shellsort(ar))
+def main(argv):
+    if (argv[1] == "-h"):
+        print(f"USAGE:\n \t python shellsort.py <Arrray>  \n \n BSP: \n\t python shellsort.py [1,2,3,4] ")
+    else:
+        shellsort(StrToArray(argv[1]))
+
+def StrToArray(str):
+    arr = str[1:-1].split(',')
+    print(arr)
+    return arr
+if __name__ == "__main__":
+    main(sys.argv)
