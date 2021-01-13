@@ -1,3 +1,4 @@
+import sys
 def printwhere(array,x,y):
     list = ([])
     for i in range(len(array)):
@@ -23,7 +24,16 @@ def bubblesort(arr):
                 t=t+1
     return arr
 
-#bsp:
-ar = [3,6,8,2,35,5,6,7,34,6,97,34,2,543,1]
-print(ar)
-print(bubblesort(ar))
+def main(argv):
+    if (argv[1] == "-h"):
+        print(f"USAGE:\n \t python bubblesort.py <Arrray>  \n \n BSP: \n\t python bubblesort.py [3,4,1,2] ")
+    else:
+        print(bubblesort(StrToArray(argv[1])))
+
+def StrToArray(str):
+    arr = str[1:-1].split(',')
+    print(arr)
+    return arr
+if __name__ == "__main__":
+    main(sys.argv)
+

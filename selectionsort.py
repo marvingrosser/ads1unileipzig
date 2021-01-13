@@ -1,3 +1,4 @@
+import sys
 def printwhere(array,x,y):
     list = ([])
     for i in range(len(array)):
@@ -19,7 +20,16 @@ def selectionsort(arr):
         print('tausch')
     return arr
 
-#Beispiel
-ar=[2,6,8,3,34,3,4,7,3,1,7,4,2,3,9,0]
-print(ar)
-print(selectionsort(ar))
+
+def main(argv):
+    if (argv[1] == "-h"):
+        print(f"USAGE:\n \t python selectionsort.py <Arrray>  \n \n BSP: \n\t python selectionsort.py [1,2,3,4] ")
+    else:
+        selectionsort(StrToArray(argv[1]))
+
+def StrToArray(str):
+    arr = str[1:-1].split(',')
+    print(arr)
+    return arr
+if __name__ == "__main__":
+    main(sys.argv)

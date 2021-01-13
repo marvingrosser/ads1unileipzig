@@ -1,3 +1,4 @@
+import sys
 def devcon(arr,i, x):
     print('\n\n Rekursion Nr. '+str(x))
     print('L = '+str(arr))
@@ -36,5 +37,21 @@ def devcon(arr,i, x):
     
     
 #Beispiel:
-ar= [5,2,7,3,1,6,12,10,9,16]
-print(devcon(ar, 5, 1))
+def StrToArray(str):
+    arr = str[1:-1].split(',')
+    intarr =[]
+    for strarre in arr :
+        intarr.append(int(strarre))
+
+
+    print(arr)
+    return arr
+
+def main(argv):
+    if (argv[1] == "-h"):
+        print(f"USAGE:\n \t python devcon.py <INTArrray> \n \n BSP: \n\t python devcon.py [3,2,5,4]")
+    else:
+        print(devcon(StrToArray(argv[1]), 1, 0))
+if __name__ == "__main__":
+    main(sys.argv)
+

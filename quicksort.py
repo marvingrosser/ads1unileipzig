@@ -1,3 +1,4 @@
+import sys
 def Quicksort(arr):
 
     if len(arr)==1:
@@ -19,7 +20,16 @@ def Quicksort(arr):
 
     return arr
 
-#Beispiel
-arr = [0,4,8,9,32,4,3,123,54,436,645,63,3,5,8,978,56,324,4,3,435,653,45,7,63,3,3,323,3]
-print(arr)
-print(Quicksort(arr))
+def main(argv):
+    if (argv[1] == "-h"):
+        print(f"USAGE:\n \t python quicksort.py <Arrray>  \n \n BSP: \n\t python quicksort.py [1,2,3,4] ")
+    else:
+        print(Quicksort(StrToArray(argv[1])))
+
+def StrToArray(str):
+    arr = str[1:-1].split(',')
+    print(arr)
+    return arr
+if __name__ == "__main__":
+    main(sys.argv)
+

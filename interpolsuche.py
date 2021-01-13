@@ -1,4 +1,5 @@
 import math
+import sys
 #Interpolationssuche
 
 def interpolsuche(arr, x, u , v, i):
@@ -30,7 +31,16 @@ def interpolsuche(arr, x, u , v, i):
             print('Suche x=' + str(x) + '  in L[], u =' + str(mid+1) + ', v=' + str(v))
             interpolsuche(arr, x, mid+1, v, i+1)
 
-#BSP:
-ar = [2,8,8,9,27,28,30,47,60,66,67,67,83,101,103,127,152,164,177,182,192,195,204,210,219,221,242,243,243,255,268,288]
+def StrToArray(str):
+    arr = str[1:-1].split(',')
+    print(arr)
+    return arr
 
-print(interpolsuche(ar,114, 0, 31, 1))
+def main(argv):
+    if (argv[1] == "-h"):
+        print(f"USAGE:\n \t python sprungsuche.py <SortedArrray> <zuSuchendesElement> \n \n BSP: \n\t python sprungsuche.py [1,2,3,4] 3")
+    else:
+        interpolsuche(StrToArray(argv[1]), argv[2])
+if __name__ == "__main__":
+    main(sys.argv)
+

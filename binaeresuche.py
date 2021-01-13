@@ -1,4 +1,5 @@
 import math
+import sys
 def binsuche(arr, x, i):
     i = i+1
     print('\n\n')
@@ -24,6 +25,18 @@ def binsuche(arr, x, i):
             binsuche(arr[mid+1:len(arr)],x, i)
 
 #Beispiel
-ar = [2,8,8,9,27,28,30,47,60,66,67,67,83,101,103,127,152,164,177,182,192,195,204,210,219,221,242,243,243,255,268,288]
+def main(argv):
+    if (argv[1] == "-h"):
+        print(f"USAGE:\n \t python binaeresuche.py <sortedINTArrray> <INTSearchedElement>  \n \n BSP: \n\t python binaeresuche.py [1,1,2,3,4,6,8,9,11] 6 ")
+    else:
+        binsuche(StrToArray(argv[1]), int(argv[2]) , 0)
 
-print(binsuche(ar,114, 0))
+def StrToArray(str):
+    arr = str[1:-1].split(',')
+    intarr =[]
+    for strarre in arr :
+        intarr.append(int(strarre))
+    return intarr
+if __name__ == "__main__":
+    main(sys.argv)
+
