@@ -33,14 +33,16 @@ def interpolsuche(arr, x, u , v, i):
 
 def StrToArray(str):
     arr = str[1:-1].split(',')
-    print(arr)
+    intarr =[]
+    for strarre in arr :
+        intarr.append(int(strarre))
     return arr
 
 def main(argv):
     if (argv[1] == "-h"):
         print(f"USAGE:\n \t python sprungsuche.py <SortedArrray> <zuSuchendesElement> \n \n BSP: \n\t python sprungsuche.py [1,2,3,4] 3")
     else:
-        interpolsuche(StrToArray(argv[1]), argv[2])
+        interpolsuche(StrToArray(argv[1]), int(argv[2]),0 ,len(StrToArray(argv[1])) -1, 1 )
 if __name__ == "__main__":
     main(sys.argv)
 
